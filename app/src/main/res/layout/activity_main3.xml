@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reportIssueLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="16dp"
+    tools:context=".ReportIssueActivity">
+
+    <!-- Back Arrow -->
+
+    <!-- Title -->
+
+    <!-- Category Buttons -->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="471dp"
+        android:layout_height="732dp"
+        android:background="@drawable/barangay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="184dp"
+        android:layout_height="54dp"
+        android:layout_alignTop="@id/backArrow"
+        android:layout_centerHorizontal="true"
+        android:text="Report Issue"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <!-- Dropdown -->
+
+    <!-- Description Box -->
+
+    <LinearLayout
+        android:id="@+id/categoryButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919">
+
+        <Button
+            android:id="@+id/btnRoad"
+            style="@style/CategoryButton"
+            android:text="Road" />
+
+        <Button
+            android:id="@+id/btnGarbage"
+            style="@style/CategoryButton"
+            android:text="Garbage" />
+
+        <Button
+            android:id="@+id/btnEmergency"
+            style="@style/CategoryButton"
+            android:text="Emergency" />
+
+        <Button
+            android:id="@+id/btnOthers"
+            style="@style/CategoryButton"
+            android:text="Others" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="376dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/issueCategoryLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
+
+
+    <TextView
+        android:id="@+id/issueCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryButtons"
+        android:text="Issue Category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photoButton"
+        android:text="Location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805" />
+
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:layout_width="371dp"
+        android:layout_height="132dp"
+        android:layout_below="@id/descriptionLabel"
+        android:background="@drawable/edit_text_border"
+        android:gravity="top|start"
+        android:hint="Enter Description"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <EditText
+        android:id="@+id/locationInput"
+        android:layout_width="366dp"
+        android:layout_height="57dp"
+        android:layout_below="@id/locationLabel"
+        android:background="@drawable/edit_text_border"
+        android:drawableStart="@drawable/ic_location"
+        android:hint="Location-"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <Button
+        android:id="@+id/photoButton"
+        android:layout_width="387dp"
+        android:layout_height="73dp"
+        android:layout_below="@id/descriptionInput"
+        android:background="@drawable/edit_text_border"
+        android:drawableStart="@drawable/ic_add_photo"
+        android:padding="12dp"
+        android:text="Add Photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
+
+    <TextView
+        android:id="@+id/descriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categorySpinner"
+        android:text="Description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.385" />
+
+    <!-- Add Photo -->
+
+    <!-- Location -->
+
+    <!-- Bottom Navigation -->
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/categorySpinner"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            style="@style/BottomNavButton"
+            android:drawableTop="@drawable/ic_home"
+            android:text="HOME" />
+
+        <Button
+            style="@style/BottomNavButton"
+            android:drawableTop="@drawable/ic_report"
+            android:text="REPORTS" />
+
+        <Button
+            style="@style/BottomNavButton"
+            android:drawableTop="@drawable/ic_calendar"
+            android:text="APPOINTMENTS" />
+
+        <Button
+            style="@style/BottomNavButton"
+            android:drawableTop="@drawable/ic_alert"
+            android:text="ALERTS" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/categoryButtons1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.909">
+
+
+        <Button
+            android:id="@+id/btnRoad1"
+            style="@style/CategoryButton"
+            android:text="Road" />
+
+        <Button
+            android:id="@+id/btnGarbage1"
+            style="@style/CategoryButton"
+            android:text="Garbage" />
+
+        <Button
+            android:id="@+id/btnEmergency1"
+            style="@style/CategoryButton"
+            android:text="Emergency" />
+
+        <Button
+            android:id="@+id/btnOthers1"
+            style="@style/CategoryButton"
+            android:text="Others" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergency"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
+
+    <Button
+        android:id="@+id/Garbage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Garbage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
+
+    <Button
+        android:id="@+id/Road"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Road"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
+
+    <Button
+        android:id="@+id/Others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Others"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
